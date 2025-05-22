@@ -13,51 +13,70 @@ public class SnapBehaviour : MonoBehaviour
 
     [Tooltip("The object to rotate randomly.")]
     public Transform gear; // Assign the child or specific object to rotate
-    void Start()
-    {
-        // Initialization logic if needed
-    }
 
-    void Update()
-    {
-        // Rotate the specified object randomly if the rotate flag is true
-        if ( gear != null)
-        {
-            gear.position = transform.position;
-            if (rotate)
-            {
-                gear.Rotate(Vector3.up, 20 * Time.deltaTime); // Rotate around the Y-axis
-            }
-        }
-    }
+    private bool isSnapping = false;
 
     private void OnTriggerEnter(Collider other)
     {
-        // Check if the colliding object has the specified gear tag
         if (other.CompareTag(gearTag))
         {
             Debug.Log("Gear object entered the trigger zone.");
-            // Snap the position to the center of the snap target
             if (snapDestination != null)
             {
-                gear = other.transform; // Assign the gear object to the one that entered the trigger
-                gear.position = snapDestination.position;
-                gear.rotation = snapDestination.rotation;
+                gear = other.transform;
+
+                Rigidbody rb = gear.GetComponent<Rigidbody>();
+                if (rb != null)
+                    rb.isKinematic = true;
+
+                isSnapping = true;
+
+                // Deactivate this object's mesh
+                MeshRenderer mesh = GetComponent<MeshRenderer>();
+                if (mesh != null)
+                    mesh.enabled = false;
             }
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        // Check if the colliding object has the specified gear tag
         if (other.CompareTag(gearTag))
         {
-            if(other.transform == gear)
+            if (gear != null && other.transform == gear)
             {
                 Debug.Log("Gear object exited the trigger zone.");
-                // Optionally, you can reset the gear position or perform other actions here
-                gear = null; // Clear the reference to the gear object
+
+                Rigidbody rb = gear.GetComponent<Rigidbody>();
+                if (rb != null)
+                    rb.isKinematic = false;
+
+                isSnapping = false;
+                gear = null;
+
+                // Reactivate this object's mesh
+                MeshRenderer mesh = GetComponent<MeshRenderer>();
+                if (mesh != null)
+                    mesh.enabled = true;
             }
+        }
+    }
+
+    private void Update()
+    {
+        if (isSnapping && gear != null)
+        {
+            // Match position and scale
+            gear.position = transform.position;
+            gear.localScale = transform.lossyScale;
+
+            // Combine parent's rotation (X, Y) with gear's own local Z rotation
+            Vector3 parentEuler = transform.rotation.eulerAngles;
+            Vector3 gearEuler = gear.rotation.eulerAngles;
+            float gearZ = gearEuler.z;
+
+            // Set rotation: parent's X and Y, gear's Z
+            gear.rotation = Quaternion.Euler(parentEuler.x, parentEuler.y, gearZ);
         }
     }
 }

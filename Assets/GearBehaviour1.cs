@@ -7,6 +7,9 @@ public class GearBehaviour : MonoBehaviour
     public bool isMoving = false; // Whether this gear is currently moving
     public List<GearBehaviour> connectedGears = new List<GearBehaviour>(); // List of connected gears
 
+    [Tooltip("The transform to rotate instead of this object. If null, rotates this.transform.")]
+    public Transform targetToRotate;
+
     private void Start()
     {
         // Optionally, initialize the gear as moving
@@ -37,8 +40,9 @@ public class GearBehaviour : MonoBehaviour
             }
         }
 
-        // Rotate this gear around its Z-axis
-        transform.Rotate(0, 0, rotationSpeed * Time.deltaTime);
+        // Rotate the target transform (or this if not set) around its Z-axis
+        Transform rotateTarget = targetToRotate != null ? targetToRotate : transform;
+        rotateTarget.Rotate(0, 0, rotationSpeed * Time.deltaTime);
 
         // Trigger connected gears to move if they are not already moving
         foreach (GearBehaviour gear in connectedGears)
@@ -77,7 +81,7 @@ public class GearBehaviour : MonoBehaviour
         {
             connectedGears.Remove(otherGear);
         }
-        isMoving = false; // Stop this gear when it exits contact with another gear
+       // isMoving = false; // Stop this gear when it exits contact with another gear
     }
 
     private void StopAllGears()
