@@ -3,21 +3,15 @@ using UnityEngine;
 
 public class GearBehaviour : MonoBehaviour
 {
-    public float rotationSpeed = 100f; // Speed of rotation
+    public int teethCount;
+    public float rotationSpeed = 10f; // Speed of rotation
     public bool isMoving = false; // Whether this gear is currently moving
     public List<GearBehaviour> connectedGears = new List<GearBehaviour>(); // List of connected gears
 
     [Tooltip("The transform to rotate instead of this object. If null, rotates this.transform.")]
     public Transform targetToRotate;
-
-    private void Start()
-    {
-        // Optionally, initialize the gear as moving
-        if (isMoving)
-        {
-            RotateGear();
-        }
-    }
+    [SerializeField]
+    private SecondaryGearBehaviour secondaryGearBehaviour;
 
     private void Update()
     {
@@ -29,17 +23,6 @@ public class GearBehaviour : MonoBehaviour
 
     private void RotateGear()
     {
-        // Check for conflicting rotation speeds
-        foreach (GearBehaviour gear in connectedGears)
-        {
-            if (gear.isMoving && Mathf.Sign(gear.rotationSpeed) == Mathf.Sign(rotationSpeed))
-            {
-                Debug.LogWarning("Conflicting rotation detected! Stopping all gears.");
-                StopAllGears();
-                return;
-            }
-        }
-
         // Rotate the target transform (or this if not set) around its Z-axis
         Transform rotateTarget = targetToRotate != null ? targetToRotate : transform;
         rotateTarget.Rotate(0, 0, rotationSpeed * Time.deltaTime);
@@ -47,23 +30,30 @@ public class GearBehaviour : MonoBehaviour
         // Trigger connected gears to move if they are not already moving
         foreach (GearBehaviour gear in connectedGears)
         {
-            if (!gear.isMoving)
-            {
-                gear.StartMoving(-rotationSpeed); // Reverse rotation for connected gears
-            }
+
+            gear.StartMoving(-rotationSpeed * teethCount); // Reverse rotation for connected gears
         }
     }
 
-    public void StartMoving(float speed)
+    public virtual void StartMoving(float speed, bool forceSpeed = false)
     {
         if (!isMoving)
         {
             isMoving = true;
-            rotationSpeed = speed;
+            if (forceSpeed)
+            {
+                rotationSpeed = speed;
+            }
+            else
+            {
+                rotationSpeed = speed / teethCount;
+                secondaryGearBehaviour?.StartMoving(rotationSpeed, true); // Start moving the secondary gear
+            }
         }
+        
     }
 
-    private void OnTriggerEnter(Collider other)
+    protected void OnTriggerEnter(Collider other)
     {
         // Detect if another gear is in contact
         GearBehaviour otherGear = other.GetComponent<GearBehaviour>();
@@ -73,24 +63,13 @@ public class GearBehaviour : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    protected void OnTriggerExit(Collider other)
     {
         // Remove the gear from the connected list when it is no longer in contact
         GearBehaviour otherGear = other.GetComponent<GearBehaviour>();
         if (otherGear != null && connectedGears.Contains(otherGear))
         {
             connectedGears.Remove(otherGear);
-        }
-       // isMoving = false; // Stop this gear when it exits contact with another gear
-    }
-
-    private void StopAllGears()
-    {
-        // Stop this gear and all connected gears
-        isMoving = false;
-        foreach (GearBehaviour gear in connectedGears)
-        {
-            gear.isMoving = false;
         }
     }
 }
