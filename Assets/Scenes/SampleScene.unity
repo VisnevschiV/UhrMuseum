@@ -247,7 +247,7 @@ GameObject:
   - component: {fileID: 66084900}
   - component: {fileID: 66084899}
   - component: {fileID: 66084901}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GearBrown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,14 +262,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 66084896}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.469, y: 1.0149193, z: -1.1528811}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.46900004, y: 1.0149193, z: -1.1528811}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1967624700328128144}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!114 &66084899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -416,7 +416,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -439,8 +439,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.1, y: 0.05487013, z: 0.1}
-  m_Center: {x: 0, y: 0.016346931, z: 0}
+  m_Size: {x: 0.0014703309, y: 0.0014339228, z: 0.00059847854}
+  m_Center: {x: 0.00004477322, y: 0.000022979752, z: 0.00020076048}
 --- !u!1 &73808061
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,8 +594,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.00021190676, y: 0.00026432076, z: 0.000044022832}
-  m_Center: {x: -0.0000030569172, y: -0.0000020190332, z: 0.0000052318546}
+  m_Size: {x: 0.00029041193, y: 0.00034480114, z: 0.000044022832}
+  m_Center: {x: 0.0000037882382, y: 0.000004358525, z: 0.000005231862}
 --- !u!114 &85041782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -611,6 +611,7 @@ MonoBehaviour:
   teethCount: 8
   rotationSpeed: 100
   isMoving: 0
+  isEngine: 0
   connectedGears: []
   targetToRotate: {fileID: 85041778}
   secondaryGearBehaviour: {fileID: 6196129835802687627}
@@ -777,7 +778,7 @@ GameObject:
   - component: {fileID: 95297181}
   - component: {fileID: 95297180}
   - component: {fileID: 95297184}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GearYellow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -930,7 +931,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -942,14 +943,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 95297179}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.856, y: 1.0122991, z: -1.226243}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1292880472944894776}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!65 &95297184
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -969,8 +970,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.1, y: 0.043419003, z: 0.1}
-  m_Center: {x: 0, y: 0.014383376, z: 0}
+  m_Size: {x: 0.0011855762, y: 0.0010742972, z: 0.0005611341}
+  m_Center: {x: 0.000006499495, y: 0.000013779961, z: 0.00021943293}
 --- !u!1 &128513415
 GameObject:
   m_ObjectHideFlags: 0
@@ -2130,7 +2131,7 @@ GameObject:
   - component: {fileID: 213317129}
   - component: {fileID: 213317128}
   - component: {fileID: 213317131}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EscapeWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10299,7 +10300,7 @@ GameObject:
   - component: {fileID: 1233369353}
   - component: {fileID: 1233369352}
   - component: {fileID: 1233369354}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fork
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12734,7 +12735,7 @@ GameObject:
   - component: {fileID: 1556598567}
   - component: {fileID: 1556598573}
   - component: {fileID: 1556598572}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Gear (7)
   m_TagString: Gear
   m_Icon: {fileID: 0}
@@ -12752,7 +12753,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1167259492621891525}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17263,6 +17264,8 @@ GameObject:
   - component: {fileID: 8898263558959072563}
   - component: {fileID: 6538025543067683487}
   - component: {fileID: 8077039856843022500}
+  - component: {fileID: 8898263558959072565}
+  - component: {fileID: 8898263558959072564}
   m_Layer: 0
   m_Name: Gear.002
   m_TagString: Untagged
@@ -17346,8 +17349,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: 1.044, y: 1.0334054, z: -0.9868}
-  m_LocalScale: {x: 100, y: 99.999985, z: 99.999985}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1556598567}
   m_Father: {fileID: 0}
@@ -17405,9 +17408,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3747245490212277447}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 99.999985, z: 99.999985}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6277674257245782783}
@@ -17722,9 +17725,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7846641146993261477}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 99.999985, z: 99.999985}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7351387156429251096}
@@ -18034,6 +18037,18 @@ PrefabInstance:
     - target: {fileID: 2243020123108092049, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444567088017680376, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+      propertyPath: m_PhysicsLayerMask.m_Bits
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6392924078911962488, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6682998310040287591, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+      propertyPath: m_PhysicsLayerMask.m_Bits
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7434851320941268098, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
       propertyPath: m_AnchorMax.y
@@ -19172,7 +19187,7 @@ GameObject:
   - component: {fileID: 8741044298974278359}
   - component: {fileID: 8741044298974278362}
   - component: {fileID: 8741044298974278360}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GearGreen
   m_TagString: Gear
   m_Icon: {fileID: 0}
@@ -19739,6 +19754,8 @@ GameObject:
   - component: {fileID: 8197580748320131227}
   - component: {fileID: 1419835998382406141}
   - component: {fileID: 9111577163950313295}
+  - component: {fileID: 9111577163950313297}
+  - component: {fileID: 9111577163950313296}
   m_Layer: 0
   m_Name: Gear.005
   m_TagString: Untagged
@@ -19797,6 +19814,7 @@ MonoBehaviour:
   teethCount: 60
   rotationSpeed: 10
   isMoving: 0
+  isEngine: 0
   connectedGears: []
   targetToRotate: {fileID: 0}
   secondaryGearBehaviour: {fileID: 0}
@@ -19893,6 +19911,8 @@ GameObject:
   - component: {fileID: 1836622887059462518}
   - component: {fileID: 6405810496893890749}
   - component: {fileID: 5930179140687418570}
+  - component: {fileID: 6405810496893890751}
+  - component: {fileID: 6405810496893890750}
   m_Layer: 0
   m_Name: Gear.006
   m_TagString: Untagged
@@ -19923,6 +19943,42 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6281081140068064589}
   m_Mesh: {fileID: -7982955950194118333, guid: 3498b9103372e744c995db2d098c7864, type: 3}
+--- !u!114 &6405810496893890750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6281081140068064589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9685f6d851b19e64f8d6beee5eb0c757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objToSnap: {fileID: 8741044298974278357}
+  snapDestination: {fileID: 1836622887059462518}
+  forcedRotationSpeed: -100
+--- !u!65 &6405810496893890751
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6281081140068064589}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0011022795, y: 0.001091795, z: 0.0004275798}
+  m_Center: {x: 0, y: -0.000005951355, z: -0.000052710115}
 --- !u!33 &6538025543067683487
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -20069,8 +20125,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -20321,6 +20377,8 @@ GameObject:
   - component: {fileID: 1967624700328128144}
   - component: {fileID: 4217946668829663548}
   - component: {fileID: 1163612356946971399}
+  - component: {fileID: 7846641146993261479}
+  - component: {fileID: 7846641146993261478}
   m_Layer: 0
   m_Name: Gear.002
   m_TagString: Untagged
@@ -20328,6 +20386,46 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &7846641146993261478
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7846641146993261477}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0015295261, y: 0.0015295264, z: 0.000052720898}
+  m_Center: {x: 0, y: 0, z: 1.8189898e-11}
+--- !u!114 &7846641146993261479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7846641146993261477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b4e3396541e59849a434ae3b18b23fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teethCount: 60
+  rotationSpeed: 10
+  isMoving: 0
+  isEngine: 0
+  connectedGears: []
+  targetToRotate: {fileID: 0}
+  secondaryGearBehaviour: {fileID: 9160542532226378586}
 --- !u!4 &8070560347544001638
 Transform:
   m_ObjectHideFlags: 0
@@ -20377,10 +20475,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9685f6d851b19e64f8d6beee5eb0c757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gearTag: Gear
-  rotate: 0
+  objToSnap: {fileID: 1167259492621891525}
   snapDestination: {fileID: 8070560347544001638}
-  gear: {fileID: 0}
+  forcedRotationSpeed: 10
 --- !u!23 &8077039856843022500
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20662,7 +20759,7 @@ MeshCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -20680,8 +20777,8 @@ Rigidbody:
   m_GameObject: {fileID: 3970048098175104750}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 6
+  m_AngularDrag: 6
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -20694,7 +20791,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -20859,6 +20956,42 @@ Transform:
   - {fileID: 448051099024034235}
   m_Father: {fileID: 3199174314793404260}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8898263558959072564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925011703792898054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9685f6d851b19e64f8d6beee5eb0c757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objToSnap: {fileID: 66084898}
+  snapDestination: {fileID: 8898263558959072563}
+  forcedRotationSpeed: -50
+--- !u!65 &8898263558959072565
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925011703792898054}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0015295261, y: 0.0015295261, z: 0.00027324288}
+  m_Center: {x: 0, y: 2.3008949e-10, z: 0.000110261026}
 --- !u!33 &8927071999783151990
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -20881,7 +21014,7 @@ GameObject:
   - component: {fileID: 9046695629214825983}
   - component: {fileID: 9046695629214825982}
   - component: {fileID: 9046695629214825985}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GearRed
   m_TagString: Gear
   m_Icon: {fileID: 0}
@@ -20925,6 +21058,7 @@ MonoBehaviour:
   teethCount: 80
   rotationSpeed: 10
   isMoving: 1
+  isEngine: 1
   connectedGears: []
   targetToRotate: {fileID: 1556598567}
   secondaryGearBehaviour: {fileID: 0}
@@ -21060,8 +21194,8 @@ Rigidbody:
   m_GameObject: {fileID: 9046695629214825980}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 6.72
+  m_AngularDrag: 8.62
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -21144,6 +21278,42 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &9111577163950313296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6067035179024721764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9685f6d851b19e64f8d6beee5eb0c757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objToSnap: {fileID: 95297183}
+  snapDestination: {fileID: 8197580748320131227}
+  forcedRotationSpeed: 80
+--- !u!65 &9111577163950313297
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6067035179024721764}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0010579149, y: 0.001057915, z: 0.00041506568}
+  m_Center: {x: 0.0000042296015, y: -0.000004228612, z: 0.00017141731}
 --- !u!4 &9131688449649986390 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2224261485402360553, guid: 29529d949c965f643befe6cfcd1e372c, type: 3}
@@ -21160,6 +21330,9 @@ GameObject:
   - component: {fileID: 7351387156429251096}
   - component: {fileID: 1667640966211012444}
   - component: {fileID: 5794803015326985237}
+  - component: {fileID: 9160542532226378586}
+  - component: {fileID: 9160542532226378585}
+  - component: {fileID: 9160542532226378587}
   m_Layer: 0
   m_Name: Gear.001
   m_TagString: Untagged
@@ -21167,6 +21340,74 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &9160542532226378585
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9160542532226378584}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0004962681, y: 0.000497851, z: 0.0004588883}
+  m_Center: {x: 0.0000011276278, y: -9.3131e-10, z: -0.000022803562}
+--- !u!114 &9160542532226378586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9160542532226378584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 856dca20aad9c77409e9787cc414de0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teethCount: 20
+  rotationSpeed: 10
+  isMoving: 0
+  isEngine: 0
+  connectedGears: []
+  targetToRotate: {fileID: 0}
+  secondaryGearBehaviour: {fileID: 0}
+  primaryGear: {fileID: 7846641146993261479}
+--- !u!54 &9160542532226378587
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9160542532226378584}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -21180,8 +21421,8 @@ SceneRoots:
   - {fileID: 610590593}
   - {fileID: 317623048}
   - {fileID: 3199174314793404260}
-  - {fileID: 66084898}
   - {fileID: 95297183}
+  - {fileID: 66084898}
   - {fileID: 8741044298974278357}
   - {fileID: 1167259492621891525}
   - {fileID: 213317127}
