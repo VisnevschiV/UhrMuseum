@@ -15,7 +15,7 @@ MonoBehaviour:
   instructions:
   - name: Hello
     sprite: {fileID: 8398557208487646791, guid: 068559f04df911c4b98f00f15e86aa7e, type: 2}
-    audioClip: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+    audioClip: {fileID: 8300000, guid: decdd4729562a4245a6925c21f7a2027, type: 3}
     instructionText: Hello, today you are going to learn how does a mechanical watch
       work and will actually assemble one.
     nextStageConditions:
@@ -25,7 +25,7 @@ MonoBehaviour:
       onSnapObjectName: 
   - name: The Basics
     sprite: {fileID: 409948387602054397, guid: 2dbd778585cad2044ad141aa1f7e172b, type: 2}
-    audioClip: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+    audioClip: {fileID: 8300000, guid: c042151c21b5a2b46bd65f6fb1f18b00, type: 3}
     instructionText: First things first, try and grab that ball in front of you.
       If you grab it with your both hands you can also scale it as you wish.
     nextStageConditions:
@@ -35,16 +35,16 @@ MonoBehaviour:
       onSnapObjectName: 
   - name: Scalling
     sprite: {fileID: 8398557208487646791, guid: 068559f04df911c4b98f00f15e86aa7e, type: 2}
-    audioClip: {fileID: 8300000, guid: b319a2e4ff8f5d840b82d8635b645d22, type: 3}
+    audioClip: {fileID: 8300000, guid: d28347158e280284dacc632d07f31f12, type: 3}
     instructionText: Great now grab it with both hands and make it bigger or smaller.
     nextStageConditions:
       timeToNextStage: 0
       onGrabObjectName: Ball
       onDropObjectName: 
       onSnapObjectName: 
-  - name: throw it away
+  - name: Throw it away
     sprite: {fileID: 409948387602054397, guid: 2dbd778585cad2044ad141aa1f7e172b, type: 2}
-    audioClip: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+    audioClip: {fileID: 8300000, guid: b23b01ab3b6f4824d835c5a5276090bc, type: 3}
     instructionText: Great Job, now throw it away to start assembling the watch
     nextStageConditions:
       timeToNextStage: 0
@@ -53,7 +53,7 @@ MonoBehaviour:
       onSnapObjectName: 
   - name: Intro
     sprite: {fileID: 21300000, guid: 7461125ec591a1548883bd61123e9138, type: 3}
-    audioClip: {fileID: 8300000, guid: b319a2e4ff8f5d840b82d8635b645d22, type: 3}
+    audioClip: {fileID: 8300000, guid: 032eb96cc2e614544b7648fd7a340188, type: 3}
     instructionText: Right now you have the main plate in front of you and some of
       the gears on the right. Take some time to find them all!!
     nextStageConditions:
@@ -63,7 +63,7 @@ MonoBehaviour:
       onSnapObjectName: 
   - name: The Main Plate
     sprite: {fileID: 5597866820062511089, guid: b67720d903bde5348a251d146c89d5d5, type: 2}
-    audioClip: {fileID: 8300000, guid: b319a2e4ff8f5d840b82d8635b645d22, type: 3}
+    audioClip: {fileID: 8300000, guid: 35d0c72260af0ac459170877db36448b, type: 3}
     instructionText: The Main Plate is the biggest , yellow piece , we will be aligning
       all the other pieces on it . You can try and play with it a little bit.
     nextStageConditions:
@@ -73,7 +73,7 @@ MonoBehaviour:
       onSnapObjectName: 
   - name: The Barrel
     sprite: {fileID: -8370015614666040204, guid: 370ba82b73d44544aaf452de14c4ef4d, type: 2}
-    audioClip: {fileID: 8300000, guid: b319a2e4ff8f5d840b82d8635b645d22, type: 3}
+    audioClip: {fileID: 8300000, guid: 38a1ef830df2cb5409ed600684a5ec72, type: 3}
     instructionText: The Barrel is the RED GEAR. Pleasse take a minute to find it
       and grab it
     nextStageConditions:
@@ -83,7 +83,7 @@ MonoBehaviour:
       onSnapObjectName: 
   - name: The Barrel
     sprite: {fileID: 10916, guid: 0000000000000000f000000000000000, type: 0}
-    audioClip: {fileID: 8300000, guid: b319a2e4ff8f5d840b82d8635b645d22, type: 3}
+    audioClip: {fileID: 8300000, guid: a44e2f28c6d39a04ea5c1b93d0320845, type: 3}
     instructionText: Great! The piece you are holding is called the barrel. It's
       the heart of the Watch and it is the only piece that moves itself.
     nextStageConditions:
@@ -93,7 +93,7 @@ MonoBehaviour:
       onSnapObjectName: 
   - name: The Barrel
     sprite: {fileID: -8370015614666040204, guid: 370ba82b73d44544aaf452de14c4ef4d, type: 2}
-    audioClip: {fileID: 8300000, guid: b319a2e4ff8f5d840b82d8635b645d22, type: 3}
+    audioClip: {fileID: 8300000, guid: a44e2f28c6d39a04ea5c1b93d0320845, type: 3}
     instructionText: Great! The piece you are holding is called the barrel. It's
       the heart of the Watch and it is the only piece that moves itself.
     nextStageConditions:
@@ -103,7 +103,7 @@ MonoBehaviour:
       onSnapObjectName: 
   - name: The Barrel
     sprite: {fileID: 2800000, guid: 9430f133ccdfa5e408338d568da2827d, type: 3}
-    audioClip: {fileID: 8300000, guid: b319a2e4ff8f5d840b82d8635b645d22, type: 3}
+    audioClip: {fileID: 8300000, guid: fde34410479448a4f953ec6ee186754d, type: 3}
     instructionText: The Movement happens because of a string inside of it that is
       always pushing it on the sides and forcing it to move.
     nextStageConditions:
@@ -113,7 +113,7 @@ MonoBehaviour:
       onSnapObjectName: 
   - name: The Barrel
     sprite: {fileID: 2800000, guid: 9430f133ccdfa5e408338d568da2827d, type: 3}
-    audioClip: {fileID: 8300000, guid: b319a2e4ff8f5d840b82d8635b645d22, type: 3}
+    audioClip: {fileID: 8300000, guid: e6778b2f591b1e5458739a2897de6113, type: 3}
     instructionText: Normally a Barrel has around 14.000 rotations saved up, wich
       means that every watch should stop working after 4 Hours. Not really useful
       right?
@@ -124,7 +124,7 @@ MonoBehaviour:
       onSnapObjectName: 
   - name: Gears
     sprite: {fileID: 2800000, guid: 9430f133ccdfa5e408338d568da2827d, type: 3}
-    audioClip: {fileID: 8300000, guid: b319a2e4ff8f5d840b82d8635b645d22, type: 3}
+    audioClip: {fileID: 8300000, guid: 561521d20fe115a44b46f08236900604, type: 3}
     instructionText: So now we will learn how to make it rotate a lot more. Please
       put the Barrel in a comfortble place for you and grab the Brown Gear.
     nextStageConditions:
@@ -134,7 +134,7 @@ MonoBehaviour:
       onSnapObjectName: 
   - name: Multiply Rotations.
     sprite: {fileID: 2800000, guid: 9430f133ccdfa5e408338d568da2827d, type: 3}
-    audioClip: {fileID: 8300000, guid: b319a2e4ff8f5d840b82d8635b645d22, type: 3}
+    audioClip: {fileID: 8300000, guid: 1c5c6dbccfa90e34eb0a5b55b473d975, type: 3}
     instructionText: Try and connect the brown Gear to the Barrel. You will obesrve
       that the brown one rotates much faster, and the smaller the gear the faster
       it rotates, that's exactly the way we are going to multiplicate the batery-life
@@ -145,7 +145,7 @@ MonoBehaviour:
       onSnapObjectName: 
   - name: Assembly The Watch
     sprite: {fileID: 2800000, guid: 9430f133ccdfa5e408338d568da2827d, type: 3}
-    audioClip: {fileID: 8300000, guid: b319a2e4ff8f5d840b82d8635b645d22, type: 3}
+    audioClip: {fileID: 8300000, guid: bfc224bf1408fa642a6dcfb21304fa08, type: 3}
     instructionText: Now that we understand what those pieces are, how about we try
       and place the existing pieces at the right place on the MainPlate?
     nextStageConditions:
