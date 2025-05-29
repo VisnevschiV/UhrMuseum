@@ -2,16 +2,25 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
+public class NextStageConditions
+{
+    public float timeToNextStage = 0f;
+    public string onGrabObjectName;
+    public string onDropObjectName;
+    public string onSnapObjectName;
+}
+[System.Serializable]
 public class Instruction
 {
     public string name;
 
+    public Texture2D sprite;
+    public AudioClip audioClip;
     [TextArea]
     public string instructionText;
 
-    public Sprite sprite;
+    public NextStageConditions nextStageConditions = new NextStageConditions();
 
-    public AudioClip audioClip;
 }
 
 

@@ -7,23 +7,13 @@ public class UserDialog : MonoBehaviour
 {
     [SerializeField] private Instructions instructions;
     [SerializeField] private TextMeshProUGUI text;
-    [SerializeField] private Image pieceImage;
-
-    private int _index;
+    [SerializeField] private RawImage pieceImage;
     private Coroutine _revealCoroutine;
 
     [ContextMenu("Show Next Instruction")]
-    public void ShowInstruction()
+    public void ShowInstruction(Instruction instruction)
     {
-        if (instructions == null || instructions.instructions == null || _index < 0 || _index >= instructions.instructions.Count)
-        {
-            Debug.LogWarning("Invalid instruction index or instructions not set.");
-            return;
-        }
-
-        Instruction instruction = instructions.instructions[_index];
         string fullText = $"<b>{instruction.name}</b>\n\n{instruction.instructionText}";
-        _index++;
 
         if (_revealCoroutine != null)
             StopCoroutine(_revealCoroutine);
@@ -31,12 +21,12 @@ public class UserDialog : MonoBehaviour
         _revealCoroutine = StartCoroutine(FadeInOutText(instruction.audioClip, instruction.sprite, fullText, 1f, 1f));
     }
 
-    private IEnumerator FadeInOutText(AudioClip audioClip, Sprite sprite, string fullText, float fadeInTime, float fadeOutTime)
+    private IEnumerator FadeInOutText(AudioClip audioClip, Texture2D texture, string fullText, float fadeInTime, float fadeOutTime)
     {
         yield return StartCoroutine(FadeTextAlpha(1f, 0f, fadeOutTime));
 
         text.text = fullText;
-        pieceImage.sprite = sprite;
+        pieceImage.texture = texture;
         AIVoice.PlayAudioOneShoot(audioClip);
 
         yield return StartCoroutine(FadeTextAlpha(0f, 1f, fadeInTime));

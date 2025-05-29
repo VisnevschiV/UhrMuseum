@@ -13,74 +13,143 @@ MonoBehaviour:
   m_Name: Instructions
   m_EditorClassIdentifier: 
   instructions:
-  - name: Mainspring
-    instructionText: This is the heart of the clock's power. It's a long, coiled
-      strip of metal stored within a cylindrical barrel. When wound, it stores potential
-      energy
+  - name: Hello
+    sprite: {fileID: 8398557208487646791, guid: 068559f04df911c4b98f00f15e86aa7e, type: 2}
+    audioClip: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+    instructionText: Hello, today you are going to learn how does a mechanical watch
+      work and will actually assemble one.
+    nextStageConditions:
+      timeToNextStage: 5
+      onGrabObjectName: 
+      onDropObjectName: 
+      onSnapObjectName: 
+  - name: The Basics
+    sprite: {fileID: 409948387602054397, guid: 2dbd778585cad2044ad141aa1f7e172b, type: 2}
+    audioClip: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+    instructionText: First things first, try and grab that ball in front of you.
+      If you grab it with your both hands you can also scale it as you wish.
+    nextStageConditions:
+      timeToNextStage: 0
+      onGrabObjectName: Ball
+      onDropObjectName: 
+      onSnapObjectName: 
+  - name: Scalling
+    sprite: {fileID: 8398557208487646791, guid: 068559f04df911c4b98f00f15e86aa7e, type: 2}
+    audioClip: {fileID: 8300000, guid: b319a2e4ff8f5d840b82d8635b645d22, type: 3}
+    instructionText: Great now grab it with both hands and make it bigger or smaller.
+    nextStageConditions:
+      timeToNextStage: 0
+      onGrabObjectName: Ball
+      onDropObjectName: 
+      onSnapObjectName: 
+  - name: throw it away
+    sprite: {fileID: 409948387602054397, guid: 2dbd778585cad2044ad141aa1f7e172b, type: 2}
+    audioClip: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+    instructionText: Great Job, now throw it away to start assembling the watch
+    nextStageConditions:
+      timeToNextStage: 0
+      onGrabObjectName: 
+      onDropObjectName: Ball
+      onSnapObjectName: 
+  - name: Intro
     sprite: {fileID: 21300000, guid: 7461125ec591a1548883bd61123e9138, type: 3}
     audioClip: {fileID: 8300000, guid: b319a2e4ff8f5d840b82d8635b645d22, type: 3}
-  - name: Mainspring Barrel
-    instructionText: The cylindrical container that houses the mainspring. The outer
-      end of the mainspring is attached to the barrel wall, and the inner end is
-      attached to an arbor (a central shaft)
-    sprite: {fileID: 7681201850867341242, guid: 215687feeab0b7445b4a1cd86c82c2e1, type: 3}
-    audioClip: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
-  - name: Power Transmission and Speed Reduction (The Going Train)
-    instructionText: A series of interconnected gears (wheels) and pinions (small
-      gears) that transmit the energy from the mainspring barrel. Each large gear
-      drives a smaller pinion on the same arbor as the next larger wheel
-    sprite: {fileID: 2289998852469363648, guid: 215687feeab0b7445b4a1cd86c82c2e1, type: 3}
-    audioClip: {fileID: 8300000, guid: d14b106713a74b448bcab90869f1706e, type: 3}
-  - name: Gear Train (or Wheel Train)
-    instructionText: A series of interconnected gears (wheels) and pinions (small
-      gears) that transmit the energy from the mainspring barrel. Each large gear
-      drives a smaller pinion on the same arbor as the next larger wheel.
-    sprite: {fileID: 3495086814825567685, guid: 215687feeab0b7445b4a1cd86c82c2e1, type: 3}
-    audioClip: {fileID: 8300000, guid: eeeda5dce5e1d344f8e2f6195f16cb38, type: 3}
-  - name: Pallet Fork (or Lever)
-    instructionText: A lever with two "pallets" (small, usually jewel-tipped surfaces)
-      that engage with the teeth of the escape wheel. It swings back and forth, alternately
-      locking and unlocking the escape wheel
-    sprite: {fileID: -1659708932042841261, guid: 215687feeab0b7445b4a1cd86c82c2e1, type: 3}
-    audioClip: {fileID: 8300000, guid: 9a6d738025ed59f4fb946bb59c20e774, type: 3}
-  - name: Balance Wheel
-    instructionText: ' A weighted wheel that oscillates back and forth at a very
-      precise frequency. It''s the "heartbeat" of the clock'
-    sprite: {fileID: 3495086814825567685, guid: 215687feeab0b7445b4a1cd86c82c2e1, type: 3}
-    audioClip: {fileID: 0}
-  - name: Hairspring (or Balance Spring)
-    instructionText: To control the rate of oscillation of the balance wheel. Its
-      elasticity ensures that the balance wheel swings back and forth with a consistent
-      period. The combination of the balance wheel and hairspring forms a resonant
-      system that dictates the clock's accuracy
-    sprite: {fileID: -1659708932042841261, guid: 215687feeab0b7445b4a1cd86c82c2e1, type: 3}
-    audioClip: {fileID: 0}
-  - name: Motion Work (or Dial Train)
-    instructionText: A separate set of gears on the dial side of the movement, distinct
-      from the main gear train. It connects the minute hand (driven by the center
-      wheel) to the hour hand.
-    sprite: {fileID: 2061223666325461347, guid: 215687feeab0b7445b4a1cd86c82c2e1, type: 3}
-    audioClip: {fileID: 0}
-  - name: Hands
-    instructionText: The hour, minute, and (optional) second hands that are mounted
-      on the arbors of the motion work and gear train
-    sprite: {fileID: 2061223666325461347, guid: 215687feeab0b7445b4a1cd86c82c2e1, type: 3}
-    audioClip: {fileID: 0}
-  - name: Dial
-    instructionText: The face of the clock, typically with hour markers and numerals
-    sprite: {fileID: 21300016, guid: 215687feeab0b7445b4a1cd86c82c2e1, type: 3}
-    audioClip: {fileID: 0}
-  - name: Crown and Stem (for winding/setting)
-    instructionText: A knob on the outside of the case connected to a stem that extends
-      into the movement
-    sprite: {fileID: 2061223666325461347, guid: 215687feeab0b7445b4a1cd86c82c2e1, type: 3}
-    audioClip: {fileID: 0}
-  - name: Case
-    instructionText: The outer housing that protects all the intricate internal components
-    sprite: {fileID: -1659708932042841261, guid: 215687feeab0b7445b4a1cd86c82c2e1, type: 3}
-    audioClip: {fileID: 0}
-  - name: Crystal
-    instructionText: ' The transparent cover over the dial, usually made of glass
-      or sapphire'
-    sprite: {fileID: 7245690677989368111, guid: 215687feeab0b7445b4a1cd86c82c2e1, type: 3}
-    audioClip: {fileID: 0}
+    instructionText: Right now you have the main plate in front of you and some of
+      the gears on the right. Take some time to find them all!!
+    nextStageConditions:
+      timeToNextStage: 0
+      onGrabObjectName: 
+      onDropObjectName: 
+      onSnapObjectName: 
+  - name: The Main Plate
+    sprite: {fileID: 5597866820062511089, guid: b67720d903bde5348a251d146c89d5d5, type: 2}
+    audioClip: {fileID: 8300000, guid: b319a2e4ff8f5d840b82d8635b645d22, type: 3}
+    instructionText: The Main Plate is the biggest , yellow piece , we will be aligning
+      all the other pieces on it . You can try and play with it a little bit.
+    nextStageConditions:
+      timeToNextStage: 10
+      onGrabObjectName: 
+      onDropObjectName: 
+      onSnapObjectName: 
+  - name: The Barrel
+    sprite: {fileID: -8370015614666040204, guid: 370ba82b73d44544aaf452de14c4ef4d, type: 2}
+    audioClip: {fileID: 8300000, guid: b319a2e4ff8f5d840b82d8635b645d22, type: 3}
+    instructionText: The Barrel is the RED GEAR. Pleasse take a minute to find it
+      and grab it
+    nextStageConditions:
+      timeToNextStage: 0
+      onGrabObjectName: GearRed
+      onDropObjectName: 
+      onSnapObjectName: 
+  - name: The Barrel
+    sprite: {fileID: 10916, guid: 0000000000000000f000000000000000, type: 0}
+    audioClip: {fileID: 8300000, guid: b319a2e4ff8f5d840b82d8635b645d22, type: 3}
+    instructionText: Great! The piece you are holding is called the barrel. It's
+      the heart of the Watch and it is the only piece that moves itself.
+    nextStageConditions:
+      timeToNextStage: 6
+      onGrabObjectName: 
+      onDropObjectName: 
+      onSnapObjectName: 
+  - name: The Barrel
+    sprite: {fileID: -8370015614666040204, guid: 370ba82b73d44544aaf452de14c4ef4d, type: 2}
+    audioClip: {fileID: 8300000, guid: b319a2e4ff8f5d840b82d8635b645d22, type: 3}
+    instructionText: Great! The piece you are holding is called the barrel. It's
+      the heart of the Watch and it is the only piece that moves itself.
+    nextStageConditions:
+      timeToNextStage: 6
+      onGrabObjectName: 
+      onDropObjectName: 
+      onSnapObjectName: 
+  - name: The Barrel
+    sprite: {fileID: 2800000, guid: 9430f133ccdfa5e408338d568da2827d, type: 3}
+    audioClip: {fileID: 8300000, guid: b319a2e4ff8f5d840b82d8635b645d22, type: 3}
+    instructionText: The Movement happens because of a string inside of it that is
+      always pushing it on the sides and forcing it to move.
+    nextStageConditions:
+      timeToNextStage: 6
+      onGrabObjectName: 
+      onDropObjectName: 
+      onSnapObjectName: 
+  - name: The Barrel
+    sprite: {fileID: 2800000, guid: 9430f133ccdfa5e408338d568da2827d, type: 3}
+    audioClip: {fileID: 8300000, guid: b319a2e4ff8f5d840b82d8635b645d22, type: 3}
+    instructionText: Normally a Barrel has around 14.000 rotations saved up, wich
+      means that every watch should stop working after 4 Hours. Not really useful
+      right?
+    nextStageConditions:
+      timeToNextStage: 6
+      onGrabObjectName: 
+      onDropObjectName: 
+      onSnapObjectName: 
+  - name: Gears
+    sprite: {fileID: 2800000, guid: 9430f133ccdfa5e408338d568da2827d, type: 3}
+    audioClip: {fileID: 8300000, guid: b319a2e4ff8f5d840b82d8635b645d22, type: 3}
+    instructionText: So now we will learn how to make it rotate a lot more. Please
+      put the Barrel in a comfortble place for you and grab the Brown Gear.
+    nextStageConditions:
+      timeToNextStage: 0
+      onGrabObjectName: GearBrown
+      onDropObjectName: 
+      onSnapObjectName: 
+  - name: Multiply Rotations.
+    sprite: {fileID: 2800000, guid: 9430f133ccdfa5e408338d568da2827d, type: 3}
+    audioClip: {fileID: 8300000, guid: b319a2e4ff8f5d840b82d8635b645d22, type: 3}
+    instructionText: Try and connect the brown Gear to the Barrel. You will obesrve
+      that the brown one rotates much faster, and the smaller the gear the faster
+      it rotates, that's exactly the way we are going to multiplicate the batery-life
+    nextStageConditions:
+      timeToNextStage: 10
+      onGrabObjectName: 
+      onDropObjectName: 
+      onSnapObjectName: 
+  - name: Assembly The Watch
+    sprite: {fileID: 2800000, guid: 9430f133ccdfa5e408338d568da2827d, type: 3}
+    audioClip: {fileID: 8300000, guid: b319a2e4ff8f5d840b82d8635b645d22, type: 3}
+    instructionText: Now that we understand what those pieces are, how about we try
+      and place the existing pieces at the right place on the MainPlate?
+    nextStageConditions:
+      timeToNextStage: 0
+      onGrabObjectName: 
+      onDropObjectName: 
+      onSnapObjectName: 

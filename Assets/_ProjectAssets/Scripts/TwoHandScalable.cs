@@ -23,6 +23,7 @@ public class TwoHandScalable : XRGrabInteractable
             initialDistance = GetInteractorDistance();
             initialScale = transform.localScale;
         }
+        GetComponent<NextStageOnGrab>()?.OnGrab();
     }
 
     protected override void OnSelectExited(SelectExitEventArgs args)
@@ -30,6 +31,7 @@ public class TwoHandScalable : XRGrabInteractable
         base.OnSelectExited(args);
 
         UpdateInteractors();
+        GetComponent<NextStageDrop>()?.OnDrop();
     }
 
     void Update()

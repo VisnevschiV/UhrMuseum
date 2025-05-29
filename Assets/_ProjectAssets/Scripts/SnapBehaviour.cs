@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class SnapBehaviour : MonoBehaviour
@@ -14,6 +15,8 @@ public class SnapBehaviour : MonoBehaviour
     private Transform gear; // Assign the child or specific object to rotate
 
     private bool isSnapping = false;
+    [SerializeField]
+    public Action onSnapComplete;
 
 
 
@@ -24,6 +27,7 @@ public class SnapBehaviour : MonoBehaviour
             Debug.Log("Gear object entered the trigger zone.");
             if (snapDestination != null)
             {
+                onSnapComplete?.Invoke();
                 gear = other.transform;
                 //gear.GetComponent<GearBehaviour>().enabled = false; // Disable GearBehaviour to prevent rotation
 
