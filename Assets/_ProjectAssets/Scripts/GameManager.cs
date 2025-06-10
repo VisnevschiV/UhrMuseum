@@ -27,10 +27,10 @@ public class GameManager : MonoSingleton<GameManager>
 
     public void NextStage()
     {
+        PreviousStageListeners();
         _stage++;
         userDialog.ShowInstruction(instructions.instructions[_stage]);
         LevelChanges();
-        PreviousStageListeners();
         NextStageListeners();
        
         
@@ -62,6 +62,8 @@ public class GameManager : MonoSingleton<GameManager>
 
     private void PreviousStageListeners()
     {
+        if (_stage < 0) return;
+        Debug.Log("Previous Stage Listeners for stage: " + _stage);
         var conditions = instructions.instructions[_stage].nextStageConditions;
 
         // Undo time-based coroutine (if any)
@@ -106,7 +108,7 @@ public class GameManager : MonoSingleton<GameManager>
 
     private void LevelChanges()
     {
-        if (_stage == 4)
+        if (_stage == 5)
         {
             ball.SetActive(false);
             foreach (GameObject element in watchElelments)

@@ -58,7 +58,7 @@ public class GearBehaviour : MonoBehaviour
     {
         // Detect if another gear is in contact
         GearBehaviour otherGear = other.GetComponent<GearBehaviour>();
-        if (otherGear != null && !connectedGears.Contains(otherGear))
+        if (otherGear != null && !connectedGears.Contains(otherGear) && otherGear != secondaryGearBehaviour)
         {
             connectedGears.Add(otherGear);
         }

@@ -26,7 +26,14 @@ public class UserDialog : MonoBehaviour
         yield return StartCoroutine(FadeTextAlpha(1f, 0f, fadeOutTime));
 
         text.text = fullText;
-        pieceImage.texture = texture;
+        if(texture == null)
+        {
+            pieceImage.texture = null;
+        }
+        else
+        {
+            pieceImage.texture = texture;
+        }
         AIVoice.PlayAudioOneShoot(audioClip);
 
         yield return StartCoroutine(FadeTextAlpha(0f, 1f, fadeInTime));
