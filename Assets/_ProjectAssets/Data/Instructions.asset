@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Instructions
   m_EditorClassIdentifier: 
   instructions:
-  - name: wait
-    sprite: {fileID: 0}
+  - name: Wait a few seconds...
+    sprite: {fileID: 7171649660781023518, guid: 16b249fe17390764c966a7de8373e29b, type: 2}
     audioClip: {fileID: 0}
     instructionText: 
     nextStageConditions:

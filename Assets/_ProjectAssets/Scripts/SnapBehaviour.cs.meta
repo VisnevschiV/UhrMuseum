@@ -1,2 +1,14 @@
 fileFormatVersion: 2
 guid: 9685f6d851b19e64f8d6beee5eb0c757
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - objToSnap: {instanceID: 0}
+  - snapDestination: {instanceID: 0}
+  - snapParticleEffectPrefab: {fileID: 7758976972108282560, guid: e25a19350af159647a91b23bdc44180a, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

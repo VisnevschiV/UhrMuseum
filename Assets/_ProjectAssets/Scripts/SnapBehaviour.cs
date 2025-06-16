@@ -12,6 +12,9 @@ public class SnapBehaviour : MonoBehaviour
     [SerializeField]
     private float forcedRotationSpeed;
 
+    [SerializeField]
+    private GameObject snapParticleEffectPrefab;
+
     private Transform gear; // Assign the child or specific object to rotate
 
     private bool isSnapping = false;
@@ -28,6 +31,12 @@ public class SnapBehaviour : MonoBehaviour
             if (snapDestination != null)
             {
                 onSnapComplete?.Invoke();
+                // UNCOMMENT WHEN TESTED WITH VR HEADSET
+                if (snapParticleEffectPrefab != null)
+                {
+                    Instantiate(snapParticleEffectPrefab, transform.position, Quaternion.identity);
+
+                }
                 gear = other.transform;
                 //gear.GetComponent<GearBehaviour>().enabled = false; // Disable GearBehaviour to prevent rotation
 

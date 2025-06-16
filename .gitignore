@@ -70,3 +70,6 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+/Assets/Samples/XR Interaction Toolkit/3.1.1
+/Assets/Gear_Green_Outer.fbx
+/Assets/Gear_Green_Outer.fbx.meta
