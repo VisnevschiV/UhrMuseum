@@ -81,7 +81,7 @@ MonoBehaviour:
       onDropObjectName: 
       onSnapObjectName: 
   - name: The Main Plate
-    sprite: {fileID: 5597866820062511089, guid: b67720d903bde5348a251d146c89d5d5, type: 2}
+    sprite: {fileID: 0}
     audioClip: {fileID: 8300000, guid: 8972a0774dff3704f9507bfb4ec63b85, type: 3}
     instructionText: 'The main plate is the large yellow piece. Everything else connects
       to it.
@@ -93,7 +93,7 @@ MonoBehaviour:
       onDropObjectName: 
       onSnapObjectName: 
   - name: The Barrel
-    sprite: {fileID: -8370015614666040204, guid: 370ba82b73d44544aaf452de14c4ef4d, type: 2}
+    sprite: {fileID: 0}
     audioClip: {fileID: 8300000, guid: e3a181d520ca1e7449ec0a9bc2dbc3a4, type: 3}
     instructionText: "Now, look for the red gear\u2014that\u2019s the barrel.\nTake
       a moment to find it and pick it up"
@@ -103,7 +103,7 @@ MonoBehaviour:
       onDropObjectName: 
       onSnapObjectName: 
   - name: The Barrel
-    sprite: {fileID: 10916, guid: 0000000000000000f000000000000000, type: 0}
+    sprite: {fileID: 0}
     audioClip: {fileID: 8300000, guid: c74e36283cf5fdf46beb9f4795abc773, type: 3}
     instructionText: "Well done. The piece you\u2019re holding is the barrel\u2014the
       heart of the watch.\nIt\u2019s the only part that powers itself."

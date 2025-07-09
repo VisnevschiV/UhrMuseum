@@ -12,31 +12,23 @@ public class SnapBehaviour : MonoBehaviour
     [SerializeField]
     private float forcedRotationSpeed;
 
-    [SerializeField]
-    private GameObject snapParticleEffectPrefab;
-
     private Transform gear; // Assign the child or specific object to rotate
-
     private bool isSnapping = false;
+    private bool hasSnapped = false; // Add this missing field
+    
     [SerializeField]
     public Action onSnapComplete;
 
-
-
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform == objToSnap)
+        if (other.transform == objToSnap && !hasSnapped) // Check the flag
         {
             Debug.Log("Gear object entered the trigger zone.");
             if (snapDestination != null)
             {
+                hasSnapped = true; // Set flag to prevent multiple calls
                 onSnapComplete?.Invoke();
-                // UNCOMMENT WHEN TESTED WITH VR HEADSET
-                if (snapParticleEffectPrefab != null)
-                {
-                    Instantiate(snapParticleEffectPrefab, transform.position, Quaternion.identity);
-
-                }
+                
                 gear = other.transform;
                 //gear.GetComponent<GearBehaviour>().enabled = false; // Disable GearBehaviour to prevent rotation
 
@@ -57,8 +49,6 @@ public class SnapBehaviour : MonoBehaviour
                     if (childMesh != mesh) // Avoid double-disabling the parent
                         childMesh.enabled = false;
                 }
-                if (mesh != null)
-                    mesh.enabled = false;
             }
         }
     }
@@ -70,6 +60,7 @@ public class SnapBehaviour : MonoBehaviour
             if (gear != null && other.transform == gear)
             {
                 Debug.Log("Gear object exited the trigger zone.");
+                hasSnapped = false; // Reset flag when object exits
                 gear.GetComponent<GearBehaviour>().enabled = true;
                 Rigidbody rb = gear.GetComponent<Rigidbody>();
                 if (rb != null)
