@@ -6858,63 +6858,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 350, y: 250}
   m_Pivot: {x: 0.5, y: 1}
---- !u!1001 &744049347
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_Name
-      value: XR Device Simulator
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
 --- !u!1001 &750546863
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11766,8 +11709,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: fbd8a43c5c58f684f9c9ffc6125e5920, type: 3}
-  m_Resource: {fileID: 8300000, guid: fbd8a43c5c58f684f9c9ffc6125e5920, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 292930611a4e8aa4a8ce5ccb205542f0, type: 3}
+  m_Resource: {fileID: 8300000, guid: 292930611a4e8aa4a8ce5ccb205542f0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.1
   m_Pitch: 1
@@ -17354,6 +17297,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5245625352718072327, guid: 49fb791cace9e2746954b6697997889a, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 210.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245625352718072327, guid: 49fb791cace9e2746954b6697997889a, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.atime0
+      value: 61873
+      objectReference: {fileID: 0}
     - target: {fileID: 6206878270722608043, guid: 49fb791cace9e2746954b6697997889a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -17393,6 +17344,10 @@ PrefabInstance:
     - target: {fileID: 6206878270722608043, guid: 49fb791cace9e2746954b6697997889a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7122738430948402319, guid: 49fb791cace9e2746954b6697997889a, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8706190629302663104, guid: 49fb791cace9e2746954b6697997889a, type: 3}
       propertyPath: m_Name
@@ -23411,6 +23366,5 @@ SceneRoots:
   - {fileID: 1684817137}
   - {fileID: 543450652810339420}
   - {fileID: 5761247050689552283}
-  - {fileID: 744049347}
   - {fileID: 1305286509}
   - {fileID: 177121022675734390}
