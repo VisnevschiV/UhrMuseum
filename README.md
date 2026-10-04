@@ -10,6 +10,10 @@ UhrMuseum turns watch assembly into an interactive, guided experience. Explore t
 
 The experience guides the visitor through a sequence of watch-assembly stages. Instructions combine on-screen text, an optional reference image, and audio narration. The next step can be triggered by a timed transition, picking up or dropping a specific object, or completing a snap interaction.
 
+### Demo video
+
+A recording of the experience is available here: [VRClock demo on YouTube](https://www.youtube.com/watch?v=Tj2vYPRoZFM&t=66s). It shows the watch assembly flow, the hand-based interactions, and the guided educational sequence in context.
+
 At the center is a mechanical-watch assembly activity:
 
 - **Disassemble and inspect:** use a two-hand pull-apart interaction to separate watch components; they ease back into place when released.
